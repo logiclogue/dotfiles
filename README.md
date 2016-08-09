@@ -1,4 +1,4 @@
-# logiclogue dotfiles
+# @logiclogue dotfiles
 
 ## Installation
 
