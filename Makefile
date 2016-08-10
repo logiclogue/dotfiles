@@ -6,11 +6,9 @@ DIRS := $(shell $(CMDDIR))
 
 
 bootstrap: $(DIRS)
-	#echo $(CURRENTDIR)
-	#echo $(DIRS)
 
 $(DIRS):
 	echo $@
-	find $@ -exec echo $(CURRENTDIR){} \;
+	find $@ -maxdepth 1 -not -path "vim/" -exec echo $(CURRENTDIR)$@{} $(HOMEDIR){} \;
 
 .PHONY: $(DIRS)
