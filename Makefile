@@ -1,16 +1,16 @@
 CMDDIR = ls -d */
-CMDFILES = 
 
-CURRENTDIR := $(shell pwd)
+CURRENTDIR := $(shell pwd)/
 HOMEDIR := ~/
 DIRS := $(shell $(CMDDIR))
 
 
 bootstrap: $(DIRS)
-	echo $(CURRENTDIR)
-	echo $(DIRS)
+	#echo $(CURRENTDIR)
+	#echo $(DIRS)
 
 $(DIRS):
-	ls $@*
+	echo $@
+	find $@ -exec echo $(CURRENTDIR){} \;
 
 .PHONY: $(DIRS)
