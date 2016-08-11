@@ -1,16 +1,18 @@
 #!/usr/bin/env bash
 
-cd "$(dirname "${BASH_SOURCE}")";
+cd "$(dirname "${BASH_SOURCE}")" || exit;
 
 git pull origin master;
 
 function doIt() {
     for D in `ls -d */`; do
-        echo $D
+        for F in `ls -A $D`; do
+            ln -sf $( pwd )/$D$F ~/
+        done
     done
 }
 
-if [ "$1" == "--force" -o "$1" == "-f" ]; then
+if [ "$1" == "--force" ] || [ "$1" == "-f" ]; then
 	doIt;
 else
 	read -p "This may overwrite existing files in your home directory. Are you sure? (y/n) " -n 1;
@@ -19,4 +21,5 @@ else
 		doIt;
 	fi;
 fi;
+
 unset doIt;
