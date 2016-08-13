@@ -1,0 +1,44 @@
+# backward/forward
+"xvkbd -xsendevent -text "\A\[Left]""
+F1
+
+"xvkbd -xsendevent -text "\A\[Right]""
+F2
+
+# screenshots
+# desktop
+"scrot '%Y-%m-%dT%H%M%S.png' -e 'mv $f ~/Downloads && eog ~/Downloads/$f'"
+Alt + F4
+# active Window
+"scrot -d 4 -u -z '%Y-%m-%dT%H%M%S.png' -e 'mv $f ~/Downloads && eog ~/Downloads/$f'"
+Control + F4
+
+# backlight decrease/increase
+"xbacklight -dec 10"
+F6
+"xbacklight -inc 10"
+F7
+
+# volume mute/decrease/increase
+"amixer -D pulse set Master 1+ toggle"
+F8
+"amixer set Master 5%-"
+F9
+"amixer set Master 5%+"
+F10
+
+# page up/down, home, end
+"xvkbd -xsendevent -text '\[Page_Up]'"
+Alt + Up
+
+"xvkbd -xsendevent -text '\[Page_Down]'"
+Alt + Down
+
+"xvkbd -xsendevent -text '\[Home]'"
+Alt + Left
+
+"xvkbd -xsendevent -text '\[End]'"
+Alt + Right
+
+#"xvkbd -xsendevent -text '\[Delete]'"
+#Shift + BackSpace
