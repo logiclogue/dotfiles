@@ -39,7 +39,7 @@ call vundle#end()            " required
 
 
 syntax enable
-"filetype plugin indent on
+filetype plugin indent on
 filetype plugin on
 set background=dark
 set shell=/bin/bash
