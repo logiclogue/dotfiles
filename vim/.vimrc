@@ -75,6 +75,11 @@ let g:syntastic_javascript_checkers = ['eslint']
 
 " vim-airline
 let g:airline#extensions#tabline#enabled = 1
+"let g:airline_powerline_fonts = 1
+if !exists('g:airline_symbols')
+  let g:airline_symbols = {}
+endif
+let g:airline_symbols.space = "\ua0"
 
 " CtrlP
 let g:ctrlp_custom_ignore = 'node_modules\|\.git'
