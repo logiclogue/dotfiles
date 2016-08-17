@@ -87,3 +87,7 @@ let g:ctrlp_show_hidden = 1
 
 " instant-markdown-vim
 "let g:instant_markdown_slow = 1
+
+" Markdown
+au BufRead,BufNewFile *.md setlocal textwidth=80
+au BufRead,BufNewFile *.md setlocal spell
