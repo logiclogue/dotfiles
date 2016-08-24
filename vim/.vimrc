@@ -35,11 +35,11 @@ Plugin 'kien/ctrlp.vim'
 Plugin 'suan/vim-instant-markdown'
 Plugin 'flazz/vim-colorschemes'
 
-call vundle#end()            " required
+call vundle#end()
 
 
 syntax enable
-filetype plugin indent on
+"filetype plugin indent on
 filetype plugin on
 set background=dark
 set shell=/bin/bash
@@ -51,6 +51,8 @@ set shiftwidth=4
 set softtabstop=4
 set tabstop=4
 set autoindent
+set smartindent
+set hlsearch
 
 set linespace=7
 set guioptions-=m
@@ -63,7 +65,7 @@ inoremap { {<CR>}<Esc>ko
 inoremap ( ()<Esc>i
 
 " NERDTree
-autocmd vimenter * NERDTree
+"autocmd vimenter * NERDTree
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 map <C-n> :NERDTreeToggle<CR>
