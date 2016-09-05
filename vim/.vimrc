@@ -39,7 +39,7 @@ call vundle#end()
 
 
 syntax enable
-filetype plugin indent on
+"filetype plugin indent on
 filetype plugin on
 set background=dark
 set shell=/bin/bash
@@ -59,7 +59,7 @@ set guioptions-=m
 set guioptions-=T
 set guioptions-=e
 
-set guifont=Droid\ Sans\ Mono\ 13
+set guifont=Droid\ Sans\ Mono\ Dotted\ for\ Powerline\ 13
 
 inoremap { {<CR>}<Esc>ko
 inoremap ( ()<Esc>i
@@ -77,7 +77,7 @@ let g:syntastic_javascript_checkers = ['eslint']
 
 " vim-airline
 let g:airline#extensions#tabline#enabled = 1
-"let g:airline_powerline_fonts = 1
+let g:airline_powerline_fonts = 1
 if !exists('g:airline_symbols')
   let g:airline_symbols = {}
 endif
