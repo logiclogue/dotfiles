@@ -1,0 +1,33 @@
+! do not scroll with output
+URxvt*scrollTtyOutput: false
+
+! scroll in relation to buffer (with mouse scroll or Shift+Page Up)
+URxvt*scrollWithBuffer: true
+
+! scroll back to the bottom on keypress
+URxvt*scrollTtyKeypress: true
+
+URxvt*font: xft:Droid Sans Mono for Powerline:size=13
+URxvt*background: #000000
+URxvt*foreground: #00FF00
+URxvt*scrollBar: false
+
+*color0:  #000000
+*color1:  #800000
+*color2: #008000
+*color3: #808000
+*color4: #000080
+*color5: #800080
+*color6: #008080
+*color7: #c0c0c0
+*color8:  #808080
+*color9:  #FF0000
+*color10: #00FF00
+*color11: #FFFF00
+*color12: #0000FF
+*color13: #FF00FF
+*color14: #00FFFF
+*color15: #FFFFFF
+
+URxvt*transparent: true
+URxvt*shading: 15
