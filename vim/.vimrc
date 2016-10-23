@@ -46,6 +46,7 @@ set shell=/bin/bash
 colorscheme base16-monokai
 
 set number
+set relativenumber
 set expandtab
 set shiftwidth=4
 set softtabstop=4
