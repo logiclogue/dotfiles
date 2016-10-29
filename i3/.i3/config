@@ -12,12 +12,15 @@
 set $mod Mod4
 set $jMod Mod1
 
+# Screen names
+set $left_screen HDMI1
+set $right_screen HDMI3
+
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
-#font pango:DejaVu Sans Mono 8
-font pango:DroidSansMono 10
+font pango:DroidSansMono, FontAwesome 10
 # Before i3 v4.8, we used to recommend this one as the default:
 # font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
 # The font above is very space-efficient, that is, it looks good, sharp and
@@ -43,6 +46,26 @@ set $base0D #66d9ef
 set $base0E #ae81ff
 set $base0F #cc6633
 
+# Workspace names
+set $ws1 "1 &#xf121;"
+set $ws2 "2 &#xf120;"
+set $ws3 3
+set $ws4 "4 &#xf0ac;"
+set $ws5 5
+set $ws6 6
+set $ws7 7
+set $ws8 8
+set $ws9 9
+set $ws10 "10 &#xf001;"
+
+# Window border will be pixel with no title bar
+new_window pixel
+
+# Scratchpad
+bindsym $mod+Shift+minus move scratchpad
+bindsym $mod+minus scratchpad show
+
+# 
 client.focused $base01 $base01 $base0B $base0B
 client.focused_inactive $base01 $base01 $base07 $base07
 client.unfocused $base02 $base02 $base04 $base04
@@ -115,28 +138,40 @@ bindsym $mod+a focus parent
 #bindsym $mod+d focus child
 
 # switch to workspace
-bindsym $mod+1 workspace 1
-bindsym $mod+2 workspace 2
-bindsym $mod+3 workspace 3
-bindsym $mod+4 workspace 4
-bindsym $mod+5 workspace 5
-bindsym $mod+6 workspace 6
-bindsym $mod+7 workspace 7
-bindsym $mod+8 workspace 8
-bindsym $mod+9 workspace 9
-bindsym $mod+0 workspace 10
+bindsym $mod+1 workspace $ws1
+bindsym $mod+2 workspace $ws2
+bindsym $mod+3 workspace $ws3
+bindsym $mod+4 workspace $ws4
+bindsym $mod+5 workspace $ws5
+bindsym $mod+6 workspace $ws6
+bindsym $mod+7 workspace $ws7
+bindsym $mod+8 workspace $ws8
+bindsym $mod+9 workspace $ws9
+bindsym $mod+0 workspace $ws10
 
 # move focused container to workspace
-bindsym $mod+Shift+1 move container to workspace 1
-bindsym $mod+Shift+2 move container to workspace 2
-bindsym $mod+Shift+3 move container to workspace 3
-bindsym $mod+Shift+4 move container to workspace 4
-bindsym $mod+Shift+5 move container to workspace 5
-bindsym $mod+Shift+6 move container to workspace 6
-bindsym $mod+Shift+7 move container to workspace 7
-bindsym $mod+Shift+8 move container to workspace 8
-bindsym $mod+Shift+9 move container to workspace 9
-bindsym $mod+Shift+0 move container to workspace 10
+bindsym $mod+Shift+1 move container to workspace $ws1
+bindsym $mod+Shift+2 move container to workspace $ws2
+bindsym $mod+Shift+3 move container to workspace $ws3
+bindsym $mod+Shift+4 move container to workspace $ws4
+bindsym $mod+Shift+5 move container to workspace $ws5
+bindsym $mod+Shift+6 move container to workspace $ws6
+bindsym $mod+Shift+7 move container to workspace $ws7
+bindsym $mod+Shift+8 move container to workspace $ws8
+bindsym $mod+Shift+9 move container to workspace $ws9
+bindsym $mod+Shift+0 move container to workspace $ws10
+
+# Workspaces and their screens
+workspace $ws1 output $right_screen
+workspace $ws2 output $left_screen
+workspace $ws3 output $right_screen
+workspace $ws4 output $left_screen
+workspace $ws5 output $right_screen
+workspace $ws6 output $left_screen
+workspace $ws7 output $right_screen
+workspace $ws8 output $left_screen
+workspace $ws9 output $right_screen
+workspace $ws10 output $left_screen
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -195,3 +230,11 @@ bar {
 bindsym $mod+$jMod+l exec i3lock -c "$base02"
 
 exec --no-startup-id xsetroot -solid="$base02"
+
+# Programs opening in specific workspaces
+assign [class="Gvim"] $ws1
+assign [class="Lxterminal"] $ws2
+assign [class="Firefox"] $ws4
+assign [class="Chromium"] $ws4
+
+exec lxterminal
