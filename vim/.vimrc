@@ -17,7 +17,6 @@ call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'tpope/vim-fugitive'
-Plugin 'L9'
 Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
 Plugin 'ascenator/L9', {'name': 'newL9'}
 
@@ -34,6 +33,7 @@ Plugin 'tpope/vim-surround'
 Plugin 'kien/ctrlp.vim'
 Plugin 'suan/vim-instant-markdown'
 Plugin 'flazz/vim-colorschemes'
+Plugin 'raimondi/delimitmate'
 
 call vundle#end()
 
@@ -64,8 +64,8 @@ set guioptions-=L
 
 set guifont=Droid\ Sans\ Mono\ Dotted\ for\ Powerline\ 13
 
-inoremap { {<CR>}<Esc>ko
-inoremap ( ()<Esc>i
+"inoremap { {<CR>}<Esc>ko
+"inoremap ( ()<Esc>i
 
 " NERDTree
 "autocmd vimenter * NERDTree
