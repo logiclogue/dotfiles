@@ -34,7 +34,11 @@ Plugin 'kien/ctrlp.vim'
 Plugin 'suan/vim-instant-markdown'
 Plugin 'flazz/vim-colorschemes'
 Plugin 'raimondi/delimitmate'
-Plugin 'tomasr/molokai'
+" Snippets
+Plugin 'honza/vim-snippets'
+Plugin 'MarcWeber/vim-addon-mw-utils'
+Plugin 'tomtom/tlib_vim'
+Plugin 'garbas/vim-snipmate'
 
 call vundle#end()
 
@@ -98,3 +102,7 @@ let g:ctrlp_show_hidden = 1
 " Markdown
 au BufRead,BufNewFile *.md setlocal textwidth=80
 au BufRead,BufNewFile *.md setlocal spell
+
+" Snippets
+imap <C-J> <Plug>snipMateNextOrTrigger
+smap <C-J> <Plug>snipMateNextOrTrigger
