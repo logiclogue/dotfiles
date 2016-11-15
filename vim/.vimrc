@@ -34,6 +34,7 @@ Plugin 'kien/ctrlp.vim'
 Plugin 'suan/vim-instant-markdown'
 Plugin 'flazz/vim-colorschemes'
 Plugin 'raimondi/delimitmate'
+Plugin 'tomasr/molokai'
 
 call vundle#end()
 
@@ -43,7 +44,8 @@ syntax enable
 filetype plugin on
 set background=dark
 set shell=/bin/bash
-colorscheme base16-monokai
+"colorscheme base16-monokai
+colorscheme molokai
 
 set number
 set relativenumber
