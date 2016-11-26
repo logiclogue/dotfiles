@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/logiclogue/dotfiles/issues"
   },
-  "homepage": "https://github.com/logiclogue/dotfiles#readme"
+  "homepage": "https://github.com/logiclogue/dotfiles#readme",
+  "dependencies": {
+    "handlebars": "^4.0.6"
+  }
 }

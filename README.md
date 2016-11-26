@@ -1,5 +1,20 @@
 # @logiclogue dotfiles
 
+## Configuration
+
+`config.json`:
+```
+{
+    "laptop": true,
+    "desktop": false
+}
+```
+
+## Devices
+
+- `laptop`
+- `desktop`
+
 ## Installation
 
 ```
