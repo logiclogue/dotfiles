@@ -13,8 +13,10 @@ set $mod Mod4
 set $jMod Mod1
 
 # Screen names
+{{#if desktop}}
 set $left_screen HDMI1
 set $right_screen HDMI3
+{{/if}}
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
@@ -70,8 +72,6 @@ client.focused $base01 $base01 $base0B $base0B
 client.focused_inactive $base01 $base01 $base07 $base07
 client.unfocused $base02 $base02 $base04 $base04
 client.urgent $base02 $base08 $base07 $base08
-
-# Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
 # start a terminal
@@ -233,8 +233,8 @@ exec --no-startup-id xsetroot -solid="$base02"
 
 # Programs opening in specific workspaces
 assign [class="Gvim"] $ws1
-assign [class="Lxterminal"] $ws2
-assign [class="Firefox"] $ws4
-assign [class="Chromium"] $ws4
+#assign [class="Lxterminal"] $ws2
+#assign [class="Firefox"] $ws4
+#assign [class="Chromium"] $ws4
 
 exec lxterminal

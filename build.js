@@ -28,6 +28,7 @@ function forEachFile(callback) {
     makeDirectories(dirNames);
     
     fileNames.forEach(fileName => {
+        console.log(fileName);
         callback(fileName);
     });
 }
