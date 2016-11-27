@@ -1,3 +1,5 @@
+{{#if desktop}}
+
 # backward/forward
 "xvkbd -xsendevent -text "\A\[Left]""
 F1
@@ -42,3 +44,19 @@ Alt + Right
 
 #"xvkbd -xsendevent -text '\[Delete]'"
 #Shift + BackSpace
+
+{{else if laptop}}
+
+# Increase volume
+"amixer -q set Master 2dB+ unmute"
+    XF86AudioRaiseVolume
+
+# Decrease volume
+"amixer -q set Master 2dB- unmute"
+    XF86AudioLowerVolume
+
+# Mute and unmute volume
+"amixer -D pulse set Master 1+ toggle"
+    XF86AudioMute
+
+{{/if}}
