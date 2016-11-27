@@ -9,7 +9,15 @@
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 ZSH_THEME="cloud"
 
+{{#if desktop}}
 ZSH_THEME_CLOUD_PREFIX=""
+{{else if laptop}}
+ZSH_THEME_CLOUD_PREFIX=""
+{{else if mobile}}
+ZSH_THEME_CLOUD_PREFIX=""
+{{else if server}}
+ZSH_THEME_CLOUD_PREFIX=""
+{{/if}}
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
