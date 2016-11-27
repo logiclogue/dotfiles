@@ -2,8 +2,6 @@
 
 cd "$(dirname "${BASH_SOURCE}")" || exit;
 
-git pull origin master;
-
 function doIt() {
     for F in `ls -A build`; do
         ln -sf $( pwd )/build/$F ~/

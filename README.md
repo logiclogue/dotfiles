@@ -29,5 +29,4 @@
 git clone https://github.com/logiclogue/dotfiles.git ~/.dotfiles
 cd ~/.dotfiles
 make
-source bootstrap.sh
 ```
