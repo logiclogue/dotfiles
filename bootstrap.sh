@@ -5,10 +5,8 @@ cd "$(dirname "${BASH_SOURCE}")" || exit;
 git pull origin master;
 
 function doIt() {
-    for D in `ls -d */`; do
-        for F in `ls -A $D`; do
-            ln -sf $( pwd )/$D$F ~/
-        done
+    for F in `ls -A build`; do
+        ln -sf $( pwd )/build/$F ~/
     done
 }
 
