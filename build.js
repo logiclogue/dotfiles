@@ -7,6 +7,14 @@ var buildDir = 'build';
 var srcDir = 'src';
 
 
+Handlebars.registerHelper('if_not', (condition, options) => {
+    if (!condition) {
+        return options.fn(this);
+    }
+
+    return options.inverse(this);
+});
+
 forEachFile(fileName => {
     var file = fs.readFileSync(fileName);
     var template = Handlebars.compile(file.toString());

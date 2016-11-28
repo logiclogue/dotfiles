@@ -13,6 +13,7 @@
 
 - `laptop`
 - `desktop`
+- `work`
 - `mobile`
 - `server`
 

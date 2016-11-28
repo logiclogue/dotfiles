@@ -49,6 +49,18 @@ set $base0E #ae81ff
 set $base0F #cc6633
 
 # Workspace names
+{{#if work}}
+set $ws1 "1 &#xf121;"
+set $ws2 "2 &#xf120;"
+set $ws3 "3 &#xf0cb;"
+set $ws4 "4 &#xf0ac;"
+set $ws5 "5 &#xf0e0;"
+set $ws6 "6 &#xf073;"
+set $ws7 7
+set $ws8 8
+set $ws9 9
+set $ws10 "10 &#xf001;"
+{{else}}
 set $ws1 "1 &#xf121;"
 set $ws2 "2 &#xf120;"
 set $ws3 3
@@ -59,6 +71,7 @@ set $ws7 7
 set $ws8 8
 set $ws9 9
 set $ws10 "10 &#xf001;"
+{{/if}}
 
 # Window border will be pixel with no title bar
 new_window pixel
