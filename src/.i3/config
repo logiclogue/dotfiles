@@ -250,4 +250,4 @@ assign [class="Gvim"] $ws1
 #assign [class="Firefox"] $ws4
 #assign [class="Chromium"] $ws4
 
-exec lxterminal
+exec --no-startup-id i3-msg 'workspace $ws2; exec lxterminal'
