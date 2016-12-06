@@ -99,3 +99,6 @@ export EDITOR='vim'
 
 # Shell colours
 export TERM=xterm-256color
+
+# Alias
+alias open="pcmanfm -d"
