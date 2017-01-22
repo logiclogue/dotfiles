@@ -96,6 +96,8 @@ export EDITOR='vim'
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+alias pomodoro="sleep 1470 && notify-send \"30 seconds left\" && sleep 30 && i3lock"
+
 
 # Shell colours
 export TERM=xterm-256color
