@@ -17,28 +17,31 @@ call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'tpope/vim-fugitive'
-Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
 Plugin 'ascenator/L9', {'name': 'newL9'}
-
 Plugin 'pangloss/vim-javascript'
 Plugin 'sheerun/vim-polyglot'
 Plugin 'othree/jsdoc-syntax.vim'
 Plugin 'elzr/vim-json'
-Plugin 'scrooloose/syntastic'
 Plugin 'scrooloose/nerdtree'
-Plugin 'Valloric/YouCompleteMe'
-Plugin 'ternjs/tern_for_vim'
 Plugin 'vim-airline/vim-airline'
 Plugin 'tpope/vim-surround'
 Plugin 'kien/ctrlp.vim'
-Plugin 'suan/vim-instant-markdown'
 Plugin 'flazz/vim-colorschemes'
 Plugin 'raimondi/delimitmate'
+
+{{#if mobile}}
+{{else}}
+Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
+Plugin 'suan/vim-instant-markdown'
+Plugin 'ternjs/tern_for_vim'
+Plugin 'scrooloose/syntastic'
+Plugin 'Valloric/YouCompleteMe'
 " Snippets
 Plugin 'honza/vim-snippets'
 Plugin 'MarcWeber/vim-addon-mw-utils'
 Plugin 'tomtom/tlib_vim'
 Plugin 'garbas/vim-snipmate'
+{{/if}}
 
 call vundle#end()
 
@@ -47,7 +50,11 @@ syntax enable
 "filetype plugin indent on
 filetype plugin on
 set background=dark
+{{#if mobile}}
+set shell=bash
+{{else}}
 set shell=/bin/bash
+{{/if}}
 "colorscheme base16-monokai
 colorscheme molokai
 
