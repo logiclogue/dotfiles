@@ -47,7 +47,6 @@ call vundle#end()
 
 
 syntax enable
-"filetype plugin indent on
 filetype plugin on
 set background=dark
 {{#if mobile}}
@@ -55,7 +54,6 @@ set shell=bash
 {{else}}
 set shell=/bin/bash
 {{/if}}
-"colorscheme base16-monokai
 colorscheme molokai
 
 set number
@@ -67,9 +65,6 @@ set tabstop=4
 set autoindent
 set smartindent
 set hlsearch
-
-"inoremap { {<CR>}<Esc>ko
-"inoremap ( ()<Esc>i
 
 " NERDTree
 map <C-n> :NERDTreeToggle<CR>
@@ -88,9 +83,6 @@ let g:airline_symbols.space = "\ua0"
 " CtrlP
 let g:ctrlp_custom_ignore = 'node_modules\|\.git'
 let g:ctrlp_show_hidden = 1
-
-" instant-markdown-vim
-"let g:instant_markdown_slow = 1
 
 " Markdown
 au BufRead,BufNewFile *.md setlocal textwidth=80
