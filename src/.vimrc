@@ -81,8 +81,14 @@ endif
 let g:airline_symbols.space = "\ua0"
 
 " CtrlP
-let g:ctrlp_custom_ignore = 'node_modules\|\.git'
 let g:ctrlp_show_hidden = 1
+let g:ctrlp_user_command = {
+	\ 'types': {
+		\ 1: ['.git', 'cd %s && git ls-files'],
+		\ 2: ['.hg', 'hg --cwd %s locate -I .'],
+		\ },
+	\ 'fallback': 'find %s -type f'
+	\ }
 
 " Markdown
 au BufRead,BufNewFile *.md setlocal textwidth=80
