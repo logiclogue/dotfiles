@@ -63,7 +63,7 @@ set $ws10 "10 &#xf001;"
 {{else}}
 set $ws1 "1 &#xf121;"
 set $ws2 "2 &#xf120;"
-set $ws3 3
+set $ws3 "3 &#xf0ac;"
 set $ws4 "4 &#xf0ac;"
 set $ws5 5
 set $ws6 6
