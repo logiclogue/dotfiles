@@ -244,10 +244,5 @@ bindsym $mod+$jMod+l exec i3lock -c "$base02"
 
 exec --no-startup-id xsetroot -solid="$base02"
 
-# Programs opening in specific workspaces
-assign [class="Gvim"] $ws1
-#assign [class="Lxterminal"] $ws2
-#assign [class="Firefox"] $ws4
-#assign [class="Chromium"] $ws4
-
+# Open `lxterminal` in workspace 2, on startup
 exec --no-startup-id i3-msg 'workspace $ws2; exec lxterminal'
