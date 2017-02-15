@@ -68,6 +68,7 @@ set hlsearch
 
 " NERDTree
 map <C-n> :NERDTreeToggle<CR>
+let NERDTreeShowHidden = 1
 
 " Syntastic
 let g:syntastic_javascript_checkers = ['eslint']
