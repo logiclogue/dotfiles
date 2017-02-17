@@ -1,0 +1,12 @@
+[user]
+    name = logiclogue
+    email = jordanpaullord@hotmail.co.uk
+
+[color]
+    ui = true
+
+[core]
+    editor = gvim
+
+[diff]
+    tool = gvimdiff
