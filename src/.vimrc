@@ -32,10 +32,8 @@ Plugin 'raimondi/delimitmate'
 {{#if mobile}}
 {{else}}
 Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
-Plugin 'suan/vim-instant-markdown'
 Plugin 'ternjs/tern_for_vim'
 Plugin 'scrooloose/syntastic'
-Plugin 'Valloric/YouCompleteMe'
 " Snippets
 Plugin 'honza/vim-snippets'
 Plugin 'MarcWeber/vim-addon-mw-utils'
