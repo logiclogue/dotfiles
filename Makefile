@@ -7,7 +7,7 @@ install:
 	npm install
 
 bootstrap:
-	sh bootstrap.sh
+	bash bootstrap.sh
 
 build:
 	node build.js
