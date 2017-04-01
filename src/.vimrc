@@ -35,7 +35,7 @@ Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
 Plugin 'ternjs/tern_for_vim'
 Plugin 'scrooloose/syntastic'
 " Snippets
-Plugin 'honza/vim-snippets'
+Plugin 'logiclogue/vim-snippets'
 Plugin 'MarcWeber/vim-addon-mw-utils'
 Plugin 'tomtom/tlib_vim'
 Plugin 'garbas/vim-snipmate'
