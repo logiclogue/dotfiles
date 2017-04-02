@@ -174,7 +174,7 @@ bindsym $mod+Shift+8 move container to workspace $ws8
 bindsym $mod+Shift+9 move container to workspace $ws9
 bindsym $mod+Shift+0 move container to workspace $ws10
 
-{{#if work}}
+{{#if desktop}}
 # Workspaces and their screens
 workspace $ws1 output $right_screen
 workspace $ws2 output $left_screen
