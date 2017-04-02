@@ -35,7 +35,7 @@ Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
 Plugin 'ternjs/tern_for_vim'
 Plugin 'scrooloose/syntastic'
 " Snippets
-Plugin 'honza/vim-snippets'
+Plugin 'logiclogue/vim-snippets'
 Plugin 'MarcWeber/vim-addon-mw-utils'
 Plugin 'tomtom/tlib_vim'
 Plugin 'garbas/vim-snipmate'
@@ -73,7 +73,11 @@ let g:syntastic_javascript_checkers = ['eslint']
 
 " vim-airline
 let g:airline#extensions#tabline#enabled = 1
+{{#if mobile}}
+let g:airline_powerline_fonts = 0
+{{else}}
 let g:airline_powerline_fonts = 1
+{{/if}}
 if !exists('g:airline_symbols')
   let g:airline_symbols = {}
 endif
