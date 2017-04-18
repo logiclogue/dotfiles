@@ -33,7 +33,8 @@ Plugin 'raimondi/delimitmate'
 {{else}}
 Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
 Plugin 'ternjs/tern_for_vim'
-Plugin 'scrooloose/syntastic'
+Plugin 'vim-syntastic/syntastic'
+Plugin 'rust-lang/rust.vim'
 " Snippets
 Plugin 'logiclogue/vim-snippets'
 Plugin 'MarcWeber/vim-addon-mw-utils'
@@ -100,3 +101,9 @@ au BufRead,BufNewFile *.md setlocal spell
 " Snippets
 imap <C-J> <Plug>snipMateNextOrTrigger
 smap <C-J> <Plug>snipMateNextOrTrigger
+
+" Rust.Vim
+let g:syntastic_rust_rustc_exe = 'cargo check'
+let g:syntastic_rust_rustc_fname = ''
+let g:syntastic_rust_rustc_args = '--'
+let g:syntastic_rust_checkers = ['rustc']
