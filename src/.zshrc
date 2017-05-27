@@ -107,4 +107,4 @@ export TERM=xterm-256color
 # Alias
 alias open="pcmanfm -d"
 alias i3lock="i3lock -c \"#49483e\""
-alias pomodoro="sleep 1470 && notify-send \"30 seconds left\" && sleep 30 && i3lock"
+alias pomodoro="pomodoro && i3lock"
