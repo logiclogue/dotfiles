@@ -107,4 +107,3 @@ export TERM=xterm-256color
 # Alias
 alias open="pcmanfm -d"
 alias i3lock="i3lock -c \"#49483e\""
-alias pomodoro="pomodoro && i3lock"
