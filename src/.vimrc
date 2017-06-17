@@ -35,6 +35,7 @@ Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
 Plugin 'ternjs/tern_for_vim'
 Plugin 'vim-syntastic/syntastic'
 Plugin 'rust-lang/rust.vim'
+Plugin 'Valloric/YouCompleteMe'
 " Snippets
 Plugin 'logiclogue/vim-snippets'
 Plugin 'MarcWeber/vim-addon-mw-utils'
