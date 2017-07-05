@@ -25,7 +25,7 @@ Plugin 'elzr/vim-json'
 Plugin 'scrooloose/nerdtree'
 Plugin 'vim-airline/vim-airline'
 Plugin 'tpope/vim-surround'
-Plugin 'kien/ctrlp.vim'
+Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'flazz/vim-colorschemes'
 Plugin 'raimondi/delimitmate'
 
@@ -93,6 +93,7 @@ let g:ctrlp_user_command = {
 		\ },
 	\ 'fallback': 'find %s -type f'
 	\ }
+let g:ctrlp_extensions = ['line']
 
 " Markdown
 au BufRead,BufNewFile *.md setlocal textwidth=80
