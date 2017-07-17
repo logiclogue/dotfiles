@@ -245,3 +245,4 @@ bar {
 bindsym $mod+$jMod+l exec i3lock -c "$base02"
 
 exec --no-startup-id xsetroot -solid="$base02"
+exec --no-startup-id ~/.fehbg
