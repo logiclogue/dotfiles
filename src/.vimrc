@@ -28,6 +28,7 @@ Plugin 'tpope/vim-surround'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'flazz/vim-colorschemes'
 Plugin 'raimondi/delimitmate'
+Plugin 'vim-scripts/loremipsum'
 
 {{#if mobile}}
 {{else}}
