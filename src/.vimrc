@@ -36,6 +36,8 @@ Plugin 'ternjs/tern_for_vim'
 Plugin 'vim-syntastic/syntastic'
 Plugin 'rust-lang/rust.vim'
 Plugin 'Valloric/YouCompleteMe'
+" HTML/CSS helper
+Plugin 'mattn/emmet-vim'
 " Snippets
 Plugin 'logiclogue/vim-snippets'
 Plugin 'MarcWeber/vim-addon-mw-utils'
