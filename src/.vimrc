@@ -76,7 +76,7 @@ let g:syntastic_javascript_checkers = ['eslint']
 
 " vim-airline
 let g:airline#extensions#tabline#enabled = 1
-{{#if mobile}}
+{{#if (or mobile work)}}
 let g:airline_powerline_fonts = 0
 {{else}}
 let g:airline_powerline_fonts = 1

@@ -22,7 +22,7 @@ ZSH_THEME_CLOUD_PREFIX=""
 {{else if server}}
 ZSH_THEME_CLOUD_PREFIX=""
 {{else if work}}
-ZSH_THEME_CLOUD_PREFIX="vm"
+ZSH_THEME_CLOUD_PREFIX=""
 {{/if}}
 
 # Uncomment the following line to use case-sensitive completion.

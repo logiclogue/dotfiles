@@ -15,6 +15,10 @@ Handlebars.registerHelper('if_not', (condition, options) => {
     return options.inverse(this);
 });
 
+Handlebars.registerHelper('or', () => (
+    Array.prototype.slice.call(arguments, 0, -1).some(Boolean)
+));
+
 forEachFile(fileName => {
     var file = fs.readFileSync(fileName);
     var template = Handlebars.compile(file.toString());
