@@ -54,7 +54,7 @@ function findDirectories(directory) {
 }
 
 function find(directory, type) {
-    var command = 'find ' + directory + ' -type ' + type;
+    var command = 'find ' + directory + ' -type ' + type + ' -not -name *.swp';
     var output = exec(command);
     var strOutput = output.toString();
     var arrayOutput = strOutput.split('\n');
