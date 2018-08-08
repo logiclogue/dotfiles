@@ -9,8 +9,13 @@
 #
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
 
+{{#if work}}
+set $mod Mod1
+set $jMod Mod4
+{{else}}
 set $mod Mod4
 set $jMod Mod1
+{{/if}}
 
 # Screen names
 {{#if desktop}}
