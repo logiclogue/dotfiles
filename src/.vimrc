@@ -75,6 +75,13 @@ let NERDTreeShowHidden = 1
 " Syntastic
 let g:syntastic_javascript_checkers = ['eslint']
 
+let g:syntastic_rust_rustc_exe = 'cargo check'
+let g:syntastic_rust_rustc_fname = ''
+let g:syntastic_rust_rustc_args = '--'
+let g:syntastic_rust_checkers = ['rustc']
+
+let g:syntastic_ocaml_camlp4r = 1
+
 " vim-airline
 let g:airline#extensions#tabline#enabled = 1
 {{#if (or mobile work)}}
@@ -105,12 +112,6 @@ au BufRead,BufNewFile *.md setlocal spell
 " Snippets
 imap <C-J> <Plug>snipMateNextOrTrigger
 smap <C-J> <Plug>snipMateNextOrTrigger
-
-" Rust.Vim
-let g:syntastic_rust_rustc_exe = 'cargo check'
-let g:syntastic_rust_rustc_fname = ''
-let g:syntastic_rust_rustc_args = '--'
-let g:syntastic_rust_checkers = ['rustc']
 
 " Custom
 " Task done
