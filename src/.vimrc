@@ -44,6 +44,7 @@ Plugin 'logiclogue/vim-snippets'
 Plugin 'MarcWeber/vim-addon-mw-utils'
 Plugin 'tomtom/tlib_vim'
 Plugin 'garbas/vim-snipmate'
+Plugin 'derekelkins/agda-vim'
 {{/if}}
 
 call vundle#end()
