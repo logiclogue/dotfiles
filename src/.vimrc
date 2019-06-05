@@ -22,7 +22,6 @@ Plugin 'sheerun/vim-polyglot'
 Plugin 'othree/jsdoc-syntax.vim'
 Plugin 'elzr/vim-json'
 Plugin 'scrooloose/nerdtree'
-Plugin 'vim-airline/vim-airline'
 Plugin 'tpope/vim-surround'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'flazz/vim-colorschemes'
@@ -82,18 +81,6 @@ let g:syntastic_rust_rustc_args = '--'
 let g:syntastic_rust_checkers = ['rustc']
 
 let g:syntastic_ocaml_camlp4r = 1
-
-" vim-airline
-let g:airline#extensions#tabline#enabled = 1
-{{#if (or mobile work)}}
-let g:airline_powerline_fonts = 0
-{{else}}
-let g:airline_powerline_fonts = 1
-{{/if}}
-if !exists('g:airline_symbols')
-  let g:airline_symbols = {}
-endif
-let g:airline_symbols.space = "\ua0"
 
 " CtrlP
 let g:ctrlp_show_hidden = 1
