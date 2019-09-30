@@ -1,3 +1,4 @@
+! URxvt
 ! do not scroll with output
 URxvt*scrollTtyOutput: false
 
@@ -31,3 +32,9 @@ URxvt*scrollBar: false
 
 URxvt*transparent: true
 URxvt*shading: 15
+
+! XTerm
+XTerm.termName: xterm-256color
+XTerm.vt100.locale: true
+XTerm.vt100.background: black
+XTerm.vt100.foreground: black
