@@ -34,7 +34,8 @@ URxvt*transparent: true
 URxvt*shading: 15
 
 ! XTerm
-XTerm.termName: xterm-256color
-XTerm.vt100.locale: true
-XTerm.vt100.background: black
-XTerm.vt100.foreground: black
+UXTerm.termName: xterm-256color
+UXTerm*locale: true
+UXTerm*background: black
+UXTerm*foreground: green
+UXTerm*faceName: Droid Sans Mono:size=13:antialias=false
