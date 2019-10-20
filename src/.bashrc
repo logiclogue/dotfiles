@@ -11,5 +11,5 @@ export PS1='\[\e[1;35m\]\u \W\$ \[\e[m\]'
 
 # Alias
 if [ -f ~/.aliases ]; then
-    source ~/.alises
+    source ~/.aliases
 fi

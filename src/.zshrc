@@ -109,5 +109,5 @@ alias open="pcmanfm -d"
 alias i3lock="i3lock -c \"#49483e\""
 
 if [ -f ~/.aliases ]; then
-    source ~/.alises
+    source ~/.aliases
 fi
