@@ -8,3 +8,8 @@ alias ls='ls $LS_OPTIONS'
 
 # Prompt prefix
 export PS1='\[\e[1;35m\]\u \W\$ \[\e[m\]'
+
+# Alias
+if [ -f ~/.aliases ]; then
+    source ~/.alises
+fi
