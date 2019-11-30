@@ -1,5 +1,7 @@
 set -o vi
 
+bind -m vi-insert "\C-l":clear-screen
+
 export LS_OPTIONS='--color=auto'
 
 # Directory colours
