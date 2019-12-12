@@ -67,6 +67,8 @@ set softtabstop=4
 set tabstop=4
 set autoindent
 set smartindent
+" Stop markdown files from folding underneath every header
+set nofoldenable
 
 " NERDTree
 map <C-n> :NERDTreeToggle<CR>
