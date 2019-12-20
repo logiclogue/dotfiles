@@ -1,46 +1,26 @@
 {{#if laptop}}
 
-# backward/forward
-"xvkbd -xsendevent -text "\A\[Left]""
-F1
-
-"xvkbd -xsendevent -text "\A\[Right]""
-F2
-
 # screenshots
 # desktop
 "scrot '%Y-%m-%dT%H%M%S.png' -e 'mv $f ~/Downloads && eog ~/Downloads/$f'"
-Alt + F4
+    Print
 # active Window
 "scrot -d 4 -u -z '%Y-%m-%dT%H%M%S.png' -e 'mv $f ~/Downloads && eog ~/Downloads/$f'"
-Control + F4
+    Shift + Print
 
 # backlight decrease/increase
 "xbacklight -dec 10"
-F6
+    XF86MonBrightnessDown
 "xbacklight -inc 10"
-F7
+    XF86MonBrightnessUp
 
 # volume mute/decrease/increase
-"pactl set-sink-mute 0 toggle"
-F8
-"pactl set-sink-volume 0 -5%"
-F9
-"pactl set-sink-volume 0 +5%"
-F10
-
-# page up/down, home, end
-"xvkbd -xsendevent -text '\[Page_Up]'"
-Alt + Up
-
-"xvkbd -xsendevent -text '\[Page_Down]'"
-Alt + Down
-
-"xvkbd -xsendevent -text '\[Home]'"
-Alt + Left
-
-"xvkbd -xsendevent -text '\[End]'"
-Alt + Right
+"amixer -c 0 set Master toggle"
+    XF86AudioMute
+"amixer -c 0 set Master 1dB-"
+    XF86AudioLowerVolume
+"amixer -c 0 set Master 1dB+"
+    XF86AudioRaiseVolume
 
 #"xvkbd -xsendevent -text '\[Delete]'"
 #Shift + BackSpace
