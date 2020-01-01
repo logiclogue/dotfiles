@@ -9,9 +9,9 @@
     Shift + Print
 
 # backlight decrease/increase
-"xbacklight -dec 10"
+"light -U 5"
     XF86MonBrightnessDown
-"xbacklight -inc 10"
+"light -A 5"
     XF86MonBrightnessUp
 
 # volume mute/decrease/increase
