@@ -44,6 +44,7 @@ Plugin 'MarcWeber/vim-addon-mw-utils'
 Plugin 'tomtom/tlib_vim'
 Plugin 'garbas/vim-snipmate'
 Plugin 'derekelkins/agda-vim'
+Plugin 'ledger/vim-ledger'
 {{/if}}
 
 call vundle#end()
@@ -98,6 +99,9 @@ let g:ctrlp_extensions = ['line']
 " Markdown
 au BufRead,BufNewFile *.md setlocal textwidth=80
 au BufRead,BufNewFile *.md setlocal spell
+
+" Ledger
+au BufNewFile,BufRead *.ldg,*.ledger setf ledger | comp ledger
 
 " Snippets
 imap <C-J> <Plug>snipMateNextOrTrigger
