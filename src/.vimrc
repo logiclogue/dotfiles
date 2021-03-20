@@ -27,6 +27,8 @@ Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'flazz/vim-colorschemes'
 Plugin 'raimondi/delimitmate'
 Plugin 'vim-scripts/loremipsum'
+" TypeScript syntax checking to be used with Syntastic
+Plugin 'Quramy/tsuquyomi'
 
 {{#if mobile}}
 {{else}}
@@ -84,6 +86,8 @@ let g:syntastic_rust_rustc_args = '--'
 let g:syntastic_rust_checkers = ['rustc']
 
 let g:syntastic_ocaml_camlp4r = 1
+
+let g:syntastic_typescript_checkers = ['tsuquyomi']
 
 " CtrlP
 let g:ctrlp_show_hidden = 1
