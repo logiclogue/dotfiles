@@ -114,3 +114,8 @@ smap <C-J> <Plug>snipMateNextOrTrigger
 " Custom
 " Task done
 map <C-J>d $V?- dGpG:put = strftime('%c')^v$hS)kJ$V?- gqgg:nohl
+
+" tsuquyomi (TypeScript)
+nmap <Space><C-]> <Plug>(TsuquyomiReferences)
+
+let g:tsuquyomi_disable_quickfix = 1
