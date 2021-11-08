@@ -17,6 +17,7 @@ call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'tpope/vim-fugitive'
+Plugin 'shumphrey/fugitive-gitlab.vim'
 Plugin 'ascenator/L9', {'name': 'newL9'}
 Plugin 'sheerun/vim-polyglot'
 Plugin 'othree/jsdoc-syntax.vim'
@@ -119,3 +120,6 @@ map <C-J>d $V?- dGpG:put = strftime('%c')^v$hS)kJ$V?- gqgg:nohl
 nmap <Space><C-]> <Plug>(TsuquyomiReferences)
 
 let g:tsuquyomi_disable_quickfix = 1
+
+" Fugitive
+let g:fugitive_gitlab_domains = ['https://gitlab.com']
