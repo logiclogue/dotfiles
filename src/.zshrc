@@ -82,6 +82,8 @@ source $ZSH/oh-my-zsh.sh
 # if [[ -n $SSH_CONNECTION ]]; then
 export EDITOR='vim'
 export PAGER='less'
+# pass password store directory
+export PASSWORD_STORE_DIR=~/Documents/Secrets/pass
 # else
 #   export EDITOR='mvim'
 # fi
