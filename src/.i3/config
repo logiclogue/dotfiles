@@ -233,6 +233,11 @@ bar {
 
 # Jordan's stuff
 
+# Keyboard layout
+input * {
+    xkb_layout gb
+}
+
 # Locking
 bindsym $mod+$jMod+l exec i3lock -c "$base02"
 
