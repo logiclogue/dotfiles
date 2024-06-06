@@ -79,7 +79,8 @@ set $ws10 "10 &#xf001;"
 {{/if}}
 
 # Window border will be pixel with no title bar
-new_window pixel
+default_border pixel
+hide_edge_borders smart
 
 # Scratchpad
 bindsym $mod+Shift+minus move scratchpad
