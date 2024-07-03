@@ -234,9 +234,11 @@ bar {
 # Jordan's stuff
 
 # Keyboard layout
+{{#if desktop}}
 input * {
     xkb_layout gb
 }
+{{/if}}
 
 # Locking
 bindsym $mod+$jMod+l exec i3lock -c "$base02"
