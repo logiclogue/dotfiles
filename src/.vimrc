@@ -37,15 +37,14 @@ Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
 Plugin 'ternjs/tern_for_vim'
 Plugin 'vim-syntastic/syntastic'
 Plugin 'rust-lang/rust.vim'
-Plugin 'Valloric/YouCompleteMe'
 Plugin 'reasonml-editor/vim-reason-plus'
+Plugin 'neoclide/coc.nvim', {'branch': 'release'}
 " HTML/CSS helper
 Plugin 'mattn/emmet-vim'
 " Snippets
 Plugin 'logiclogue/vim-snippets'
 Plugin 'MarcWeber/vim-addon-mw-utils'
 Plugin 'tomtom/tlib_vim'
-Plugin 'garbas/vim-snipmate'
 Plugin 'derekelkins/agda-vim'
 Plugin 'ledger/vim-ledger'
 {{/if}}
