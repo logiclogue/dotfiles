@@ -80,7 +80,7 @@ source $ZSH/oh-my-zsh.sh
 
 # Preferred editor for local and remote sessions
 # if [[ -n $SSH_CONNECTION ]]; then
-export EDITOR='vim'
+export EDITOR='nvim'
 export PAGER='less'
 # pass password store directory
 export PASSWORD_STORE_DIR=~/Documents/Secrets/pass
