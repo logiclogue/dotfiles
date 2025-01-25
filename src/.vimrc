@@ -48,10 +48,31 @@ Plugin 'MarcWeber/vim-addon-mw-utils'
 Plugin 'tomtom/tlib_vim'
 Plugin 'derekelkins/agda-vim'
 Plugin 'ledger/vim-ledger'
+
+" Avante
+" Dependencies
+Plugin 'stevearc/dressing.nvim'
+Plugin 'nvim-lua/plenary.nvim'
+Plugin 'MunifTanjim/nui.nvim'
+
+" Optional Dependencies
+Plugin 'hrsh7th/nvim-cmp'
+Plugin 'nvim-tree/nvim-web-devicons'
+Plugin 'HakonHarnes/img-clip.nvim'
+Plugin 'zbirenbaum/copilot.lua'
+
+" Avante.nvim (no branch/do options available in Vundle)
+Plugin 'yetone/avante.nvim'
 {{/if}}
 
 call vundle#end()
 
+" After running :PluginInstall, compile Avante.nvim manually:
+" :!make -C ~/.vim/bundle/avante.nvim
+
+" Set up Avante.nvim
+autocmd VimEnter * lua require('avante_lib').load()
+autocmd VimEnter * lua require('avante').setup()
 
 syntax enable
 filetype plugin on
