@@ -2,70 +2,58 @@
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
-" set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+call plug#begin()
 
-" Brief help
-" :PluginList       - lists configured plugins
-" :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
-" :PluginSearch foo - searches for foo; append `!` to refresh local cache
-" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
-"
-" see :h vundle for more details or wiki for FAQ
-" Put your non-Plugin stuff after this line
-
-Plugin 'VundleVim/Vundle.vim'
-Plugin 'tpope/vim-fugitive'
-Plugin 'shumphrey/fugitive-gitlab.vim'
-Plugin 'ascenator/L9', {'name': 'newL9'}
-Plugin 'sheerun/vim-polyglot'
-Plugin 'othree/jsdoc-syntax.vim'
-Plugin 'elzr/vim-json'
-Plugin 'scrooloose/nerdtree'
-Plugin 'tpope/vim-surround'
-Plugin 'ctrlpvim/ctrlp.vim'
-Plugin 'flazz/vim-colorschemes'
-Plugin 'raimondi/delimitmate'
-Plugin 'vim-scripts/loremipsum'
+Plug 'tpope/vim-fugitive'
+Plug 'shumphrey/fugitive-gitlab.vim'
+Plug 'ascenator/L9', {'name': 'newL9'}
+Plug 'sheerun/vim-polyglot'
+Plug 'othree/jsdoc-syntax.vim'
+Plug 'elzr/vim-json'
+Plug 'scrooloose/nerdtree'
+Plug 'tpope/vim-surround'
+Plug 'ctrlpvim/ctrlp.vim'
+Plug 'flazz/vim-colorschemes'
+Plug 'raimondi/delimitmate'
+Plug 'vim-scripts/loremipsum'
 " TypeScript syntax checking to be used with Syntastic
-Plugin 'Quramy/tsuquyomi'
+Plug 'Quramy/tsuquyomi'
 
 
 {{#if mobile}}
 {{else}}
-Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
-Plugin 'ternjs/tern_for_vim'
-Plugin 'vim-syntastic/syntastic'
-Plugin 'rust-lang/rust.vim'
-Plugin 'reasonml-editor/vim-reason-plus'
-Plugin 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'rstacruz/sparkup', { 'rtp': 'vim/' }
+Plug 'ternjs/tern_for_vim'
+Plug 'vim-syntastic/syntastic'
+Plug 'rust-lang/rust.vim'
+Plug 'reasonml-editor/vim-reason-plus'
+Plug 'neoclide/coc.nvim', { 'branch': 'release' }
 " HTML/CSS helper
-Plugin 'mattn/emmet-vim'
+Plug 'mattn/emmet-vim'
 " Snippets
-Plugin 'logiclogue/vim-snippets'
-Plugin 'MarcWeber/vim-addon-mw-utils'
-Plugin 'tomtom/tlib_vim'
-Plugin 'derekelkins/agda-vim'
-Plugin 'ledger/vim-ledger'
+Plug 'logiclogue/vim-snippets'
+Plug 'MarcWeber/vim-addon-mw-utils'
+Plug 'tomtom/tlib_vim'
+Plug 'derekelkins/agda-vim'
+Plug 'ledger/vim-ledger'
 
 " Avante
 " Dependencies
-Plugin 'stevearc/dressing.nvim'
-Plugin 'nvim-lua/plenary.nvim'
-Plugin 'MunifTanjim/nui.nvim'
+Plug 'stevearc/dressing.nvim'
+Plug 'nvim-lua/plenary.nvim'
+Plug 'MunifTanjim/nui.nvim'
 
 " Optional Dependencies
-Plugin 'hrsh7th/nvim-cmp'
-Plugin 'nvim-tree/nvim-web-devicons'
-Plugin 'HakonHarnes/img-clip.nvim'
-Plugin 'zbirenbaum/copilot.lua'
+Plug 'hrsh7th/nvim-cmp'
+Plug 'nvim-tree/nvim-web-devicons'
+Plug 'HakonHarnes/img-clip.nvim'
+Plug 'zbirenbaum/copilot.lua'
 
 " Avante.nvim (no branch/do options available in Vundle)
-Plugin 'yetone/avante.nvim'
+Plug 'yetone/avante.nvim'
 {{/if}}
 
-call vundle#end()
+call plug#end()
 
 " After running :PluginInstall, compile Avante.nvim manually:
 " :!make -C ~/.vim/bundle/avante.nvim
