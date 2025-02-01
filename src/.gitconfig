@@ -10,4 +10,4 @@
     excludesfile = ~/.gitignore
 
 [diff]
-    tool = gvimdiff
+    tool = vimdiff
