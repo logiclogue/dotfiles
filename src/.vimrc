@@ -16,9 +16,6 @@ Plug 'ctrlpvim/ctrlp.vim'
 Plug 'flazz/vim-colorschemes'
 Plug 'raimondi/delimitmate'
 Plug 'vim-scripts/loremipsum'
-" TypeScript syntax checking to be used with Syntastic
-Plug 'Quramy/tsuquyomi'
-
 
 {{#if mobile}}
 {{else}}
