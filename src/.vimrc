@@ -99,8 +99,6 @@ let g:syntastic_rust_checkers = ['rustc']
 
 let g:syntastic_ocaml_camlp4r = 1
 
-let g:syntastic_typescript_checkers = ['tsuquyomi']
-
 " CtrlP
 let g:ctrlp_show_hidden = 1
 let g:ctrlp_user_command = {
@@ -126,11 +124,6 @@ smap <C-J> <Plug>snipMateNextOrTrigger
 " Custom
 " Task done
 map <C-J>d $V?- dGpG:put = strftime('%c')^v$hS)kJ$V?- gqgg:nohl
-
-" tsuquyomi (TypeScript)
-nmap <Space><C-]> <Plug>(TsuquyomiReferences)
-
-let g:tsuquyomi_disable_quickfix = 1
 
 " Fugitive
 let g:fugitive_gitlab_domains = ['https://gitlab.com']
