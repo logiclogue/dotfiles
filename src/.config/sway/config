@@ -1,0 +1,51 @@
+# sway config file (v4)
+#
+# Please see https://github.com/swaywm/sway/wiki for a complete reference!
+
+{{> _partials/_variables}}
+
+{{> _partials/_keybindings}}
+
+# start a terminal
+bindsym $mod+Return exec foot
+
+# start application launcher
+bindsym $mod+d exec wofi --show drun
+
+# exit sway (logs you out of your Wayland session)
+bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'
+
+# Start waybar to display a workspace bar (plus the system information waybar
+# finds out, if available)
+bar {
+    swaybar_command waybar
+}
+
+{{> _partials/_window_rules}}
+
+# Jordan's stuff
+
+# Input configuration (Wayland specific)
+{{#if desktop}}
+input type:keyboard {
+    xkb_layout gb
+}
+{{/if}}
+
+# Output configuration
+{{#if desktop}}
+output $left_screen pos 0 0
+output $right_screen pos 1920 0
+{{/if}}
+
+# Idle configuration
+exec swayidle -w \
+    timeout 300 'swaylock -f -c $base02' \
+    timeout 600 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' \
+    before-sleep 'swaylock -f -c $base02'
+
+# Override locking command for sway
+bindsym $mod+$jMod+l exec swaylock -f -c "$base02"
+
+# Wayland-specific startup
+exec --no-startup-id ~/.fehbg
