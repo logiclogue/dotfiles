@@ -1,15 +1,55 @@
-all: pull install build bootstrap
+# Variables
+SRCDIR := src
+BUILDDIR := build
+NODE := node
+BUILD_SCRIPT := build.js
 
-pull:
-	git pull origin master
+# Find all source files recursively
+SRCFILES := $(shell find $(SRCDIR) -type f -not -name "*.swp")
+# Transform source paths to build paths
+BUILDFILES := $(patsubst $(SRCDIR)/%,$(BUILDDIR)/%,$(SRCFILES))
 
-install:
-	npm install
+# Default target
+all: $(BUILDFILES)
 
-bootstrap:
-	bash bootstrap.sh
+# Create build directory structure
+$(BUILDDIR):
+	mkdir -p $(BUILDDIR)
 
-build:
-	node build.js
+# Individual file transformation rule
+$(BUILDDIR)/%: $(SRCDIR)/% config.json $(BUILD_SCRIPT) | $(BUILDDIR)
+	@mkdir -p $(dir $@)
+	@echo "Processing $<"
+	@$(NODE) -e " \
+		var Handlebars = require('handlebars'); \
+		var fs = require('fs'); \
+		var config = require('./config.json'); \
+		Handlebars.registerHelper('if_not', (condition, options) => { \
+			if (!condition) { return options.fn(this); } \
+			return options.inverse(this); \
+		}); \
+		Handlebars.registerHelper('or', () => ( \
+			Array.prototype.slice.call(arguments, 0, -1).some(Boolean) \
+		)); \
+		var file = fs.readFileSync('$<'); \
+		var template = Handlebars.compile(file.toString()); \
+		var compiledFile = template(config); \
+		fs.writeFileSync('$@', compiledFile); \
+	"
 
-.PHONY: git npm bootstrap build
+# Clean build directory
+clean:
+	rm -rf $(BUILDDIR)
+
+# Show what files would be built
+list:
+	@echo "Source files:"
+	@echo $(SRCFILES) | tr ' ' '\n'
+	@echo ""
+	@echo "Build targets:"
+	@echo $(BUILDFILES) | tr ' ' '\n'
+
+# Force rebuild of all files
+rebuild: clean all
+
+.PHONY: all clean list rebuild
