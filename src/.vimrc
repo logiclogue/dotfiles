@@ -16,6 +16,7 @@ Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.8' }
 Plug 'flazz/vim-colorschemes'
 Plug 'raimondi/delimitmate'
 Plug 'vim-scripts/loremipsum'
+Plug 'nvim-tree/nvim-web-devicons'
 
 {{#if mobile}}
 {{else}}
