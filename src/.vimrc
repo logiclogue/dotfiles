@@ -12,7 +12,7 @@ Plug 'othree/jsdoc-syntax.vim'
 Plug 'elzr/vim-json'
 Plug 'scrooloose/nerdtree'
 Plug 'tpope/vim-surround'
-Plug 'ctrlpvim/ctrlp.vim'
+Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.8' }
 Plug 'flazz/vim-colorschemes'
 Plug 'raimondi/delimitmate'
 Plug 'vim-scripts/loremipsum'
@@ -47,7 +47,6 @@ Plug 'HakonHarnes/img-clip.nvim'
 Plug 'zbirenbaum/copilot.lua'
 Plug 'stevearc/dressing.nvim'
 Plug 'MunifTanjim/nui.nvim'
-Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-treesitter/nvim-treesitter'
 Plug 'nvim-tree/nvim-web-devicons'
 
@@ -98,17 +97,6 @@ let g:syntastic_rust_rustc_args = '--'
 let g:syntastic_rust_checkers = ['rustc']
 
 let g:syntastic_ocaml_camlp4r = 1
-
-" CtrlP
-let g:ctrlp_show_hidden = 1
-let g:ctrlp_user_command = {
-	\ 'types': {
-		\ 1: ['.git', 'cd %s && git ls-files'],
-		\ 2: ['.hg', 'hg --cwd %s locate -I .'],
-		\ },
-	\ 'fallback': 'find %s -type f'
-	\ }
-let g:ctrlp_extensions = ['line']
 
 " Markdown
 au BufRead,BufNewFile *.md setlocal textwidth=80
@@ -292,3 +280,11 @@ nnoremap <silent><nowait> <space>k  :<C-u>CocPrev<CR>
 nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
 
 " End - Coc
+
+" Find files using Telescope command-line sugar.
+nnoremap <C-P> <cmd>Telescope find_files<cr>
+nnoremap <leader>ff <cmd>Telescope find_files<cr>
+nnoremap <leader>fg <cmd>Telescope live_grep<cr>
+nnoremap <leader>fb <cmd>Telescope buffers<cr>
+nnoremap <leader>fh <cmd>Telescope help_tags<cr>
+" End Telescope
