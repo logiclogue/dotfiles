@@ -65,9 +65,13 @@ exec --no-startup-id ~/.fehbg
 exec wl-paste --type text --watch cliphist store
 exec wl-paste --type image --watch cliphist store
 
+# Fcitx5 input method
+exec_always fcitx5 -d --replace
+exec_always --no-startup-id dbus-send --type=method_call --dest=org.fcitx.Fcitx5 /controller org.fcitx.Fcitx.Controller1.SetConfig string:fcitx://config/addon/imselector/local string:True
+
 # Export environment variables for systemd and dbus
-exec systemctl --user import-environment WAYLAND_DISPLAY DISPLAY XDG_CURRENT_DESKTOP SWAYSOCK I3SOCK XCURSOR_SIZE XCURSOR_THEME
-exec dbus-update-activation-environment WAYLAND_DISPLAY DISPLAY XDG_CURRENT_DESKTOP SWAYSOCK I3SOCK XCURSOR_SIZE XCURSOR_THEME
+exec systemctl --user import-environment WAYLAND_DISPLAY DISPLAY XDG_CURRENT_DESKTOP SWAYSOCK I3SOCK XCURSOR_SIZE XCURSOR_THEME GTK_IM_MODULE QT_IM_MODULE XMODIFIERS
+exec dbus-update-activation-environment WAYLAND_DISPLAY DISPLAY XDG_CURRENT_DESKTOP SWAYSOCK I3SOCK XCURSOR_SIZE XCURSOR_THEME GTK_IM_MODULE QT_IM_MODULE XMODIFIERS
 
 # Clipboard history keybinding
 bindsym $mod+i exec cliphist list | fuzzel --dmenu | cliphist decode | wl-copy
