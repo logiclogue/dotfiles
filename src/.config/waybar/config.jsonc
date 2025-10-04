@@ -10,15 +10,8 @@
 
     "sway/workspaces": {
         "disable-scroll": false,
-        "all-outputs": true,
-        "format": "{name}",
-        "persistent_workspaces": {
-            "1": [],
-            "2": [],
-            "3": [],
-            "4": [],
-            "5": []
-        }
+        "all-outputs": false,
+        "format": "{name}"
     },
 
     "sway/mode": {
