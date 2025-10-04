@@ -2,6 +2,11 @@
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
+" Clipboard support for Wayland:
+" - Requires 'wl-clipboard' package installed (provides wl-copy and wl-paste)
+" - Neovim automatically detects and uses wl-clipboard on Wayland
+" - Use "+y to copy to system clipboard, "+p to paste from system clipboard
+
 call plug#begin()
 
 Plug 'tpope/vim-fugitive'

@@ -266,7 +266,3 @@ for_window [class="plasmashell" window_type="notification"] border none; move po
 for_window [title="Desktop @ QRect"] kill; floating enable; border none
 {{/if}}
 
-# Sway
-input type:keyboard {
-    xkb_layout gb
-}

@@ -2,6 +2,15 @@
 #
 # Please see https://github.com/swaywm/sway/wiki for a complete reference!
 
+# Required packages for Sway/Wayland:
+# - wl-clipboard (clipboard utilities: wl-copy, wl-paste)
+# - cliphist (clipboard manager)
+# - grim, slurp (screenshot tools)
+# - foot (terminal)
+# - fuzzel (application launcher)
+# - waybar (status bar)
+# - swaylock, swayidle (screen locking and idle management)
+
 {{> _partials/_variables}}
 
 {{> _partials/_keybindings}}
@@ -10,7 +19,7 @@
 bindsym $mod+Return exec foot
 
 # start application launcher
-bindsym $mod+d exec wofi --show drun
+bindsym $mod+d exec fuzzel
 
 # exit sway (logs you out of your Wayland session)
 bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'
@@ -26,11 +35,11 @@ bar {
 # Jordan's stuff
 
 # Input configuration (Wayland specific)
-{{#if desktop}}
+{{#unless mobile}}
 input type:keyboard {
     xkb_layout gb
 }
-{{/if}}
+{{/unless}}
 
 # Output configuration
 {{#if desktop}}
@@ -48,4 +57,21 @@ exec swayidle -w \
 bindsym $mod+$jMod+l exec swaylock -f -c "$base02"
 
 # Wayland-specific startup
+# Note: If using swaybg, ~/.fehbg may work. Otherwise set wallpaper with:
+# output * bg /path/to/wallpaper fill
 exec --no-startup-id ~/.fehbg
+
+# Clipboard manager
+exec wl-paste --type text --watch cliphist store
+exec wl-paste --type image --watch cliphist store
+
+# Export environment variables for systemd and dbus
+exec systemctl --user import-environment WAYLAND_DISPLAY DISPLAY XDG_CURRENT_DESKTOP SWAYSOCK I3SOCK XCURSOR_SIZE XCURSOR_THEME
+exec dbus-update-activation-environment WAYLAND_DISPLAY DISPLAY XDG_CURRENT_DESKTOP SWAYSOCK I3SOCK XCURSOR_SIZE XCURSOR_THEME
+
+# Clipboard history keybinding
+bindsym $mod+i exec cliphist list | fuzzel --dmenu | cliphist decode | wl-copy
+
+# Screenshots
+bindsym Print exec grim ~/Pictures/screenshot-$(date +%Y%m%d-%H%M%S).png
+bindsym Shift+Print exec grim -g "$(slurp)" ~/Pictures/screenshot-$(date +%Y%m%d-%H%M%S).png

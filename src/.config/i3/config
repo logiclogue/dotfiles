@@ -9,6 +9,14 @@
 #
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
 
+# Required packages for i3/X11:
+# - i3-wm, i3status (window manager and status bar)
+# - i3lock (screen locking)
+# - dmenu (application launcher)
+# - xorg-setxkbmap (keyboard layout)
+# - xorg-xsetroot (root window configuration)
+# - feh (wallpaper setting, via ~/.fehbg)
+
 {{> _partials/_variables}}
 
 {{> _partials/_keybindings}}
@@ -32,10 +40,13 @@ bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcu
 
 # Jordan's stuff
 
+# Locking
+bindsym $mod+$jMod+l exec i3lock -c "$base02"
+
 # Keyboard layout (X11 specific)
-{{#if desktop}}
+{{#unless mobile}}
 exec --no-startup-id setxkbmap gb
-{{/if}}
+{{/unless}}
 
 exec --no-startup-id xsetroot -solid="$base02"
 exec --no-startup-id ~/.fehbg
