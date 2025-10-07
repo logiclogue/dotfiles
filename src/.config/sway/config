@@ -41,35 +41,23 @@ input type:keyboard {
 }
 {{/unless}}
 
-# Output configuration
-{{#if desktop}}
 output $left_screen pos 0 0
-output $right_screen pos 1920 0
-{{else}}
-# Laptop + external monitor setup
-output DP-1 pos 0 0
-output DP-2 pos 0 0
-output eDP-1 pos 2560 0
+output $right_screen pos 19200 0
 
-# Workspace assignments
-workspace $ws1 output DP-1
-workspace $ws3 output DP-1
-workspace $ws5 output DP-1
-workspace $ws7 output DP-1
-workspace $ws9 output DP-1
-
-workspace $ws1 output DP-2
-workspace $ws3 output DP-2
-workspace $ws5 output DP-2
-workspace $ws7 output DP-2
-workspace $ws9 output DP-2
+# External monitor setup
+# Workspace assignments - odd workspaces on any external monitor, even on laptop
+# Using * as fallback will match any connected output except those explicitly assigned
+workspace $ws1 output *
+workspace $ws3 output *
+workspace $ws5 output *
+workspace $ws7 output *
+workspace $ws9 output *
 
 workspace $ws2 output eDP-1
-workspace $ws3 output eDP-1
+workspace $ws4 output eDP-1
 workspace $ws6 output eDP-1
 workspace $ws8 output eDP-1
 workspace $ws10 output eDP-1
-{{/if}}
 
 # Idle configuration
 exec swayidle -w \
