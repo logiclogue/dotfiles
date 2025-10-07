@@ -48,22 +48,27 @@ output $right_screen pos 1920 0
 {{else}}
 # Laptop + external monitor setup
 output DP-1 pos 0 0
-output eDP-1 pos 1920 0
+output DP-2 pos 0 0
+output eDP-1 pos 2560 0
 
 # Workspace assignments
-# Even workspaces (2,4,6,8,10) on external monitor
-workspace $ws2 output DP-1
-workspace $ws4 output DP-1
-workspace $ws6 output DP-1
-workspace $ws8 output DP-1
-workspace $ws10 output DP-1
+workspace $ws1 output DP-1
+workspace $ws3 output DP-1
+workspace $ws5 output DP-1
+workspace $ws7 output DP-1
+workspace $ws9 output DP-1
 
-# Odd workspaces (1,3,5,7,9) on laptop screen
-workspace $ws1 output eDP-1
+workspace $ws1 output DP-2
+workspace $ws3 output DP-2
+workspace $ws5 output DP-2
+workspace $ws7 output DP-2
+workspace $ws9 output DP-2
+
+workspace $ws2 output eDP-1
 workspace $ws3 output eDP-1
-workspace $ws5 output eDP-1
-workspace $ws7 output eDP-1
-workspace $ws9 output eDP-1
+workspace $ws6 output eDP-1
+workspace $ws8 output eDP-1
+workspace $ws10 output eDP-1
 {{/if}}
 
 # Idle configuration
