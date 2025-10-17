@@ -56,6 +56,10 @@ workspace $ws6 output eDP-1
 workspace $ws8 output eDP-1
 workspace $ws10 output eDP-1
 
+# Laptop lid handling - disable laptop screen when lid closes, workspaces auto-move to external monitor
+bindswitch --reload --locked lid:on output eDP-1 disable
+bindswitch --reload --locked lid:off output eDP-1 enable
+
 # Idle configuration
 exec swayidle -w \
     timeout 300 'swaylock -f -c $base02' \
