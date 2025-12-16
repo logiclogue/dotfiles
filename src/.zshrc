@@ -13,8 +13,6 @@ export ZSH=/home/jordan/.oh-my-zsh
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 ZSH_THEME="cloud"
 
-ZSH_THEME_CLOUD_PREFIX=$( hostname )
-
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
 
@@ -62,6 +60,31 @@ plugins=( git npm vi-mode sudo docker-compose dotenv )
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
+
+# Generate hostname colour based on hostname hash
+_hostname_colour() {
+    local hostname=$(hostname)
+    local colours=(
+        'red'
+        'green'
+        'yellow'
+        'blue'
+        'magenta'
+        'cyan'
+    )
+
+    local hash=0
+    for ((i=0; i<${#hostname}; i++)); do
+        hash=$((hash + $(printf '%d' "'${hostname:$i:1}")))
+    done
+
+    local colour_index=$((hash % ${#colours[@]}))
+    local colour=${colours[$((colour_index + 1))]}
+
+    echo "%{$fg_bold[${colour}]%}${hostname}%{$reset_color%}"
+}
+
+ZSH_THEME_CLOUD_PREFIX=$(_hostname_colour)
 
 # export MANPATH="/usr/local/man:$MANPATH"
 
