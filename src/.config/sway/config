@@ -90,5 +90,5 @@ exec dbus-update-activation-environment WAYLAND_DISPLAY DISPLAY XDG_CURRENT_DESK
 bindsym $mod+i exec cliphist list | fuzzel --dmenu | cliphist decode | wl-copy
 
 # Screenshots
-bindsym Print exec grim ~/Pictures/screenshot-$(date +%Y%m%d-%H%M%S).png
-bindsym Shift+Print exec grim -g "$(slurp)" ~/Pictures/screenshot-$(date +%Y%m%d-%H%M%S).png
+bindsym $mod+p exec grim ~/Downloads/screenshot-$(date +%Y%m%d-%H%M%S).png
+bindsym Shift+$mod+p exec grim -g "$(slurp)" ~/Downloads/screenshot-$(date +%Y%m%d-%H%M%S).png
