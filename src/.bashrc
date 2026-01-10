@@ -59,6 +59,9 @@ export NVM_DIR="$HOME/.nvm"
 # Shell colours
 export TERM=xterm-256color
 
+# Bitwarden
+export SSH_AUTH_SOCK="$HOME/.bitwarden-ssh-agent.sock"
+
 # Alias
 alias open="pcmanfm -d"
 alias i3lock="i3lock -c \"#49483e\""

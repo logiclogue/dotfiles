@@ -133,6 +133,9 @@ export TERM=xterm-256color
 alias open="pcmanfm -d"
 alias i3lock="i3lock -c \"#49483e\""
 
+# Bitwarden
+export SSH_AUTH_SOCK="$HOME/.bitwarden-ssh-agent.sock"
+
 if [ -f ~/.aliases ]; then
     source ~/.aliases
 fi
