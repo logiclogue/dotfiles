@@ -1,0 +1,5 @@
+default partial alphanumeric_keys
+xkb_symbols "altgr_pipe" {
+    include "gb"
+    key <AB09> { [ period, greater, bar, brokenbar ] };
+};

@@ -37,7 +37,7 @@ bar {
 # Input configuration (Wayland specific)
 {{#unless mobile}}
 input type:keyboard {
-    xkb_layout gb
+    xkb_file ~/.config/xkb/keymap
 }
 {{/unless}}
 
