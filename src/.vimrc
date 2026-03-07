@@ -115,14 +115,12 @@ au BufNewFile,BufRead *.ldg,*.ledger setf ledger | comp ledger
 imap <C-J> <Plug>snipMateNextOrTrigger
 smap <C-J> <Plug>snipMateNextOrTrigger
 
-" Custom
-" Task done
-map <C-J>d $V?- dGpG:put = strftime('%c')^v$hS)kJ$V?- gqgg:nohl
-
 " Fugitive
 let g:fugitive_gitlab_domains = ['https://gitlab.com']
 
 " CoC
+
+let g:coc_global_extensions = ['coc-rust-analyzer']
 
 " May need for Vim (not Neovim) since coc.nvim calculates byte offset by count
 " utf-8 byte sequence
