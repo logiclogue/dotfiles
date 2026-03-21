@@ -6,7 +6,7 @@
 # - wl-clipboard (clipboard utilities: wl-copy, wl-paste)
 # - cliphist (clipboard manager)
 # - grim, slurp (screenshot tools)
-# - foot (terminal)
+# - ghostty (terminal)
 # - fuzzel (application launcher)
 # - waybar (status bar)
 # - swaylock, swayidle (screen locking and idle management)
@@ -16,7 +16,7 @@
 {{> _partials/_keybindings}}
 
 # start a terminal
-bindsym $mod+Return exec foot
+bindsym $mod+Return exec ghostty
 
 # start application launcher
 bindsym $mod+d exec fuzzel
